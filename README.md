@@ -1,82 +1,43 @@
-# Template for my NPM libraries
+# Santi's Quick Queue
 
-Hello, everyone! This is a template repo for my libraries.
-You'll find a readme template inside this file.
-
-In order for the CI workflow's publishing jobs to execute successfully, you must have two
-Actions secrets set up -- `NPM_AUTH_TOKEN` and `GPR_AUTH_TOKEN`.
-They're set to a default dummy value "your-token-here".
-You might want to check the [YAML Actions workflow](.github/workflows/main.yml) for hints
-and information you may want or need to know.
-
-## Template features
-
-- License (both template contents and code built from it): MIT.
-- Code of conduct: adapted from the Contributor Covenant.
-- Package manager: Yarn 1.22.19.
-- Automatic testing: Jest.
-- TypeScript 4.9.5 for built-in type definitions and support for compiling to ES3.
-- ESLint and Prettier.
-- A pre-commit hook for prettifying and validation, so you don't get embarrased if your PR's CI fails :)
-- Security policy and contribution guidelines.
-
-- Self-made scripts for verification of package.json and creation of an ESM wrapper
-  around TypeScript's CommonJS output to allow for usage within both CJS and ESM projects.
-
-<!-- START README TEMPLATE -->
-<!-- 
-* Make sure to replace ALL placeholders.
-! The readme will be broken otherwise!
--->
-
-<!-- # Library Name -->
-<!-- Badges -->
-<!-- Example: 
 [![Build Status][workflow badge]][repo actions]
 [![npm homepage][npm badge]][npm home]
 [![GitHub stars][stars badge]][repo url]
 [![License][license badge]][repo url]
 [![Bundlephobia stats][bundlephobia badge]][bundlephobia url]
 
-[workflow badge]: https://github.com/<author>/<repo>/actions/workflows/main.yml/badge.svg
-[npm badge]: https://img.shields.io/npm/v/@<author>/<repo>
-[stars badge]: https://img.shields.io/github/stars/<author>/<repo>.svg
-[license badge]: https://img.shields.io/github/license/<author>/<repo>.svg
-[bundlephobia badge]: https://img.shields.io/bundlephobia/min/@<author>/<repo>
+[workflow badge]: https://github.com/santi100a/queue-lib/actions/workflows/ci.yml/badge.svg
+[npm badge]: https://img.shields.io/npm/v/@santi100/queue-lib
+[stars badge]: https://img.shields.io/github/stars/santi100a/queue-lib.svg
+[license badge]: https://img.shields.io/github/license/santi100a/queue-lib.svg
+[bundlephobia badge]: https://img.shields.io/bundlephobia/min/@santi100a/queue-lib
 
-[npm home]: https://npmjs.org/package/@<author>/<repo>
-[repo actions]: https://github.com/<author>/<repo>/actions
-[repo url]: https://github.com/<author>/<repo>
-[bundlephobia url]: https://bundlephobia.com/package/@<author>/<repo>@latest
--->
+[npm home]: https://npmjs.org/package/@santi100/queue-lib
+[repo actions]: https://github.com/santi100a/queue-lib/actions
+[repo url]: https://github.com/santi100a/queue-lib
+[bundlephobia url]: https://bundlephobia.com/package/@santi100/queue-lib@latest
 
-<!-- Bullet points -->
-<!-- Example:
 - 🚀 Lightweight and fast[^](#disclaimers)
 - 👴 ES3-compliant[*](#disclaimers)
 - 💻 Portable between the browser and Node.js
--->
+- 📘 Comes with built-in TypeScript definitions
 
-<!-- ## What's this? -->
-<!-- Description -->
+## What's this?
 
-<!-- Mentions, inspirations -->
+This is a simple TypeScript implementation of a queue data structure, where the first item put
+onto it (enqueued) is the first to be taken out (dequeued).
 
-<!-- ## Installation -->
-<!-- Installation steps and/or commands -->
-<!-- Example:
-- Via NPM: `npm install @<author>/<repo>`
-- Via Yarn: `yarn add @<author>/<repo>`
-- Via PNPM: `pnpm install @<author>/<repo>`
--->
+- Via NPM: `npm install @santi100/queue-lib`
+- Via Yarn: `yarn add @santi100/queue-lib`
+- Via PNPM: `pnpm install @santi100/queue-lib`
 
-<!-- ## API -->
+## API
 <!--
 * If a class/function/variable is deprecated, you must cross it out by wrapping the 
 * `<class/function/variable prototype/definition/type def>;` with tildes, like this:
 * ~~`<class/function/variable prototype/definition/type def>;`~~ (deprecated [since <version>])
 
-- `<class/function/variable prototype/definition/type def>;` ([since <version if not first version>]) ([deprecated [since <version>]]) <description>
+- `class Queue<T = unknown>;` Main class.
    | Name       |     Type    | Description        | Optional? | Default                                |
    |------------|-------------|--------------------|-----------|----------------------------------------|
    |<param name>|<param type> |<param description> | <Yes/No>  | <N/A if not optional, else the default>|
