@@ -11,9 +11,8 @@
 [npm badge]: https://img.shields.io/npm/v/@santi100/queue-lib
 [stars badge]: https://img.shields.io/github/stars/santi100a/queue-lib.svg
 [license badge]: https://img.shields.io/github/license/santi100a/queue-lib.svg
-[bundlephobia badge]: https://img.shields.io/bundlephobia/min/@santi100/queue-lib
+[bundlephobia badge]: https://img.shields.io/bundlephobia/min/@santi100%2fqueue-lib
 [discord badge]: https://img.shields.io/badge/Join%20us%20on%20Discord-7289DA?logo=discord&logoColor=white
-
 
 [discord url]: https://discord.gg/HFYhpWFnz4
 [npm home]: https://npmjs.org/package/@santi100/queue-lib
